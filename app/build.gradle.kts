@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    kotlin("kapt") // Para la generación de código de Realm
+    id("io.realm.kotlin")
+
 }
 
 android {
@@ -45,5 +48,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("io.realm.kotlin:library-base:1.11.0")
+    implementation("io.realm.kotlin:library-base:1.13.0")
 }
